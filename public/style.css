@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
+  font-family: var(--general-font);
+}
+
+h2 {
+  font-family: var(--heading-font);
+}
+
+:root {
   --color-primary: #0B4F6C;
   --color-primary-alt: #87CEEB;
   --color-secondary: #AAFCB8;
@@ -7,7 +15,8 @@
   --color-text: #19303b;
   --color-light: #fff;
   --color-anchor: #0B4F6C;
-  --font-family: "Baloo 2", sans-serif;
+  --general-font: "Roboto", arial;
+  --heading-font: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
@@ -99,8 +108,37 @@ nav, footer {
   grid-column: 2/3;
 }
 
+#about > section {
+  margin-bottom: 45px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+#about ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+}
+#about ul li {
+  background-color: #bebebe;
+  flex: 1 1;
+  list-style: none;
+  margin: 2px;
+  padding: 5px 15px;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+  height: 84px;
+}
+
 svg {
   width: 50px;
+}
+
+article {
+  padding: 15Px 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
