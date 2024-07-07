@@ -1,0 +1,6 @@
+.link-guidelines {
+    @include ball-link;
+    &:hover {
+        @include ball-hover;
+    }
+}

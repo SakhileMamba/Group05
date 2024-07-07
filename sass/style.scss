@@ -4,6 +4,7 @@
 // Overrides just need placed prior to the theme import
 // For example:
 // $color-primary: #3a0;
+@import "links";
 @import "theme";
 @import "reset";
 @import "logomark";
@@ -12,10 +13,10 @@
 @import "header";
 @import "nav";
 @import "about";
+@import "glassmorphism";
 @import "guidelines";
 @import "contribute";
 @import "files";
 @import "styles";
 @import "profile";
 @import "footer";
-@import "links";

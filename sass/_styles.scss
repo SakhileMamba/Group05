@@ -2,6 +2,9 @@ svg {
     width: 50px;
 }
 
-article {
-    padding: 15Px 25px;
+section {
+    margin-top: 40px;
+}
+body {
+    background: $color-background url(../svg/grass.svg) fixed;
 }
