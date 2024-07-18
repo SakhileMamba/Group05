@@ -7,19 +7,32 @@ main {
     grid-column: 2/3;
 }
 
+header,
+footer {
+    grid-column: 1 / 4;
+}
+
+.skip-link {
+    grid-column: 1 / 4;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
 header {
-    grid-column: 2 / 3;
+    grid-row: 3/4;
 }
 
 nav>ul {
-   
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-nav, footer {
-    grid-column: 2 / 3;
-    
+nav {
+    grid-column: 1 / 4;
+    grid-row: 2/3;
+
+    ul {}
 }
