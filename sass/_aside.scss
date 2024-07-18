@@ -1,0 +1,19 @@
+aside {
+    background-color: white;
+    margin: 40px 16px;
+    padding: 16px;
+    height: max-content;
+
+}
+
+aside:first-of-type {
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+
+
+    }
+}
