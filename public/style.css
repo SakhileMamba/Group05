@@ -18,7 +18,7 @@ h1, h2, h3 {
 .skip-link {
   display: flex;
   background-color: white;
-  padding: 16px;
+  padding: 16px 16px 0;
   height: max-content;
 }
 
@@ -30,8 +30,10 @@ h1, h2, h3 {
   --color-text: #19303b;
   --color-light: #fff;
   --color-anchor: #0B4F6C;
-  --general-font: "Roboto", arial;
-  --heading-font: "Baloo 2", sans-serif;
+  --general-font: "Roboto",
+  arial;
+  --heading-font: "Baloo 2",
+  sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
@@ -104,8 +106,14 @@ p {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 650px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
 }
 
 main {
@@ -124,7 +132,7 @@ footer {
 }
 
 header {
-  grid-row: 3/4;
+  grid-row: 2/3;
 }
 
 nav > ul {
@@ -136,8 +144,9 @@ nav > ul {
 
 nav {
   grid-column: 1/4;
-  grid-row: 2/3;
+  grid-row: 3/4;
 }
+
 :root {
   --color-primary: #0B4F6C;
   --color-primary-alt: #87CEEB;
@@ -146,8 +155,10 @@ nav {
   --color-text: #19303b;
   --color-light: #fff;
   --color-anchor: #0B4F6C;
-  --general-font: "Roboto", arial;
-  --heading-font: "Baloo 2", sans-serif;
+  --general-font: "Roboto",
+  arial;
+  --heading-font: "Baloo 2",
+  sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
@@ -159,7 +170,7 @@ nav {
 
 header {
   background-color: white;
-  padding: 16px;
+  padding: 16px 16px 0;
   text-align: center;
 }
 
@@ -171,8 +182,10 @@ header {
   --color-text: #19303b;
   --color-light: #fff;
   --color-anchor: #0B4F6C;
-  --general-font: "Roboto", arial;
-  --heading-font: "Baloo 2", sans-serif;
+  --general-font: "Roboto",
+  arial;
+  --heading-font: "Baloo 2",
+  sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
@@ -184,12 +197,13 @@ header {
 
 nav {
   background-color: white;
+  padding: 16px;
 }
 nav ul {
   padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
-  margin: 0 16px;
   flex-direction: column;
   background-color: #008000;
 }
@@ -204,15 +218,12 @@ nav li a {
   font-size: medium;
   text-decoration: double;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 650px) {
   nav ul {
     flex-direction: row;
-    justify-items: center;
   }
   nav ul li {
-    flex: 1 1 150px;
-    min-width: 100px;
-    justify-self: center;
+    min-width: 90px;
   }
 }
 
@@ -235,106 +246,4 @@ blockquote {
   list-style: none;
   margin: 2px;
   padding: 5px 15px;
-  text-align: center;
-  align-content: center;
-  border: 1px solid black;
-  height: 84px;
-}
-
-article .container {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.link-guidelines {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  background-image: url(../svg/ball.svg);
-  background-color: white;
-  background-size: contain;
-  text-decoration: none;
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  line-height: 200px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 3px 3px 5px rgba(0, 0, 0, 0.8), -3px -3px 5px rgba(0, 0, 0, 0.8);
-  -webkit-text-stroke: 1px #0B4F6C;
-  transition: transform 10s ease;
-}
-.link-guidelines:hover {
-  /*animation: rotateAnimation 10s linear infinite;*/
-  transform: rotate(360deg);
-}
-
-#files a {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  background-image: url(../svg/ball.svg);
-  background-color: white;
-  background-size: contain;
-  text-decoration: none;
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  line-height: 200px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 3px 3px 5px rgba(0, 0, 0, 0.8), -3px -3px 5px rgba(0, 0, 0, 0.8);
-  -webkit-text-stroke: 1px #0B4F6C;
-  transition: transform 10s ease;
-}
-#files a:hover {
-  /*animation: rotateAnimation 10s linear infinite;*/
-  transform: rotate(360deg);
-}
-
-/*@include ball-keyframes;*/
-#contribute li {
-  color: #87CEEB;
-}
-
-svg {
-  width: 25px;
-}
-
-section {
-  margin-top: 40px;
-}
-
-body {
-  background: #008000 url(../svg/grass.svg) fixed;
-}
-
-:root {
-  --color-primary: #0B4F6C;
-  --color-primary-alt: #87CEEB;
-  --color-secondary: #AAFCB8;
-  --color-background: #008000;
-  --color-text: #19303b;
-  --color-light: #fff;
-  --color-anchor: #0B4F6C;
-  --general-font: "Roboto", arial;
-  --heading-font: "Baloo 2", sans-serif;
-  --font-weight-strong: 500;
-  --font-size-h1: 6rem;
-  --font-size-h2: 3rem;
-  --font-size-h3: 2rem;
-  --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
-  --border-radius: 8px;
-}
-
-footer {
-  background-color: white;
-}
-
-/*# sourceMappingURL=style.css.map */
+  text

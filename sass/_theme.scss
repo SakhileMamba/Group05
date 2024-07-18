@@ -2,27 +2,24 @@ $color-primary: #0B4F6C !default;
 $color-primary-alt: #87CEEB !default;
 $color-secondary: #AAFCB8 !default;
 $color-background: #008000 !default;
+$break-point: 650px;
 
 $brand-colors: (
   primary: $color-primary,
   primary-alt: $color-primary-alt,
   secondary: $color-secondary,
-) !default;
+  ) !default;
 
-$color-body: scale-color(
-  $color-primary,
-  $lightness: -30%,
-  $saturation: -50%
-) !default;
+$color-body: scale-color($color-primary,
+    $lightness: -30%,
+    $saturation: -50%) !default;
 $color-gray: mix(#333333, $color-body, 70%) !default;
 
-$colors: map-merge(
-  $brand-colors,
-  (
-    background: $color-background,
-    text: $color-body,
-    light: #fff,
-  )
+$colors: map-merge($brand-colors,
+    (background: $color-background,
+      text: $color-body,
+      light: #fff,
+    )
 );
 
 @function color($key) {
@@ -30,7 +27,7 @@ $colors: map-merge(
 }
 
 @function svgColor($color) {
-  @return "%23" + str-slice("#{color($color)}", 2, -1);
+  @return "%23"+str-slice("#{color($color)}", 2, -1);
 }
 
 $link-color: color(primary) !default;
@@ -58,8 +55,10 @@ $font-sizes: (
   }
 
   --color-anchor: #{$link-color};
-  --general-font: "Roboto", arial;
-  --heading-font: "Baloo 2", sans-serif;
+  --general-font: "Roboto",
+  arial;
+  --heading-font: "Baloo 2",
+  sans-serif;
   --font-weight-strong: #{$font-weight-strong};
 
   @each $key, $size in $font-sizes {
