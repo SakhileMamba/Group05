@@ -194,8 +194,10 @@ nav ul {
   background-color: #008000;
 }
 nav li {
+  border: 1px solid white;
   padding: 16px;
   text-align: center;
+  width: 100%;
 }
 nav li a {
   color: white;
