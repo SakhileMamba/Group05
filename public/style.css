@@ -1,10 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   font-family: var(--general-font);
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+
+html {
+  font-size: 22px;
 }
 
 h1, h2, h3 {
   font-family: var(--heading-font);
+}
+
+h1 {
+  font-size: var(--s3);
+}
+
+h2 {
+  font-size: var(--s2);
+}
+
+h3 {
+  font-size: var(--s1);
 }
 
 .link-github {
@@ -259,6 +287,7 @@ blockquote {
   align-content: center;
   border: 1px solid black;
   height: 84px;
+  line-height: 1rem;
 }
 
 article .container {
